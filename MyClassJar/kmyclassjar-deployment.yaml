@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kmyclassjar-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kmyclassjar
+  template:
+    metadata:
+      labels:
+        app: kmyclassjar
+    spec:
+      containers:
+        - name: kmyclassjar
+          image: kuhancdac/kmyclassjar:latest
+          ports:
+            - containerPort: 80
