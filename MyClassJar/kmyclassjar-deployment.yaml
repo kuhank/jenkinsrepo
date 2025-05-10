@@ -15,5 +15,6 @@ spec:
       containers:
         - name: kmyclassjar
           image: kuhancdac/kmyclassjar:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 80
